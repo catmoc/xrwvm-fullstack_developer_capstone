@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Link the style sheet here -->
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+        <div class="container-fluid">
+            <h2 style="padding-right: 5%;">Dealerships</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="card" style="width: 80%; margin: auto; margin-top:5%;">
+        <div class="banner" name="contact-header">
+            <!-- Insert header information here -->
+            <h1>Contact Us</h1>
+            <p>Got a question? We’re here to help! Reach out to our team, and we’ll be happy to assist you with anything related to our dealership.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin: auto;">
+
+            <div class="card" style="width: 45%; padding: 20px;">
+                <h3>Visit Us</h3>
+                <p><strong>Best Cars Dealership</strong></p>
+                <p>123 Auto Street, City, Country</p>
+                <p><strong>Opening Hours:</strong></p>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+
+            <div class="card" style="width: 45%; padding: 20px;">
+                <h3>Contact Information</h3>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p><strong>Email:</strong> contact@bestcars.com</p>
+
+                <h3>Send Us a Message</h3>
+                <form action="/submit_contact_form" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
